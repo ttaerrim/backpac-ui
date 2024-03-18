@@ -2,6 +2,7 @@ import styles from './Card.module.css';
 import Description from './Description';
 import Image from './Image';
 import Stars from './Stars';
+import Title from './Title';
 
 type CardProps = {
   direction: 'row' | 'column';
@@ -18,9 +19,7 @@ export default function Card({ direction, label, title, image, star }: CardProps
       <section className={styles.info}>
         <div className={styles.titleWrapper}>
           <span>{label}</span>
-          <span>
-            <em>{title}</em>
-          </span>
+          <Title text={title} />
         </div>
         <div className={styles.descWrapper}>
           <span>Highlight</span>
