@@ -51,12 +51,12 @@
       background-color: rgb(255, 217, 0);
     }
   }
+}
 
-  .helpMessage {
-    display: inline-block;
-    width: 95%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+.description {
+  display: inline-block;
+  width: 95%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

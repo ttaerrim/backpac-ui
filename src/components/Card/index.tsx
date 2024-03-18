@@ -40,10 +40,10 @@ export default function Card({ direction, label, title, image, star }: CardProps
             <div key={i} className={`${styles.star} ${item ? styles.fill : ''}`}></div>
           ))}
         </div>
-        <span className={styles.helpMessage}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
-        </span>
+        <Description
+          message='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.'
+        />
       </section>
     </article>
   );
