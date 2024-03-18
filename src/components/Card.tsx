@@ -1,4 +1,4 @@
-import * as styles from './Card.module.css';
+import styles from './Card.module.css';
 
 const EXAMPLE_IMG = 'https://image.idus.com/image/files/d5da94ffc1b840bd9ccc0dc86da5ab24.jpg';
 
