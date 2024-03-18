@@ -24,9 +24,9 @@ export default function Card({ direction, label, title, description, image, star
           <Title text={title} />
         </div>
         <div className={styles.descWrapper}>
-          <span>Highlight</span>
+          <span className={styles.highlight}>Highlight</span>
           <span>
-            <s>Cross Out</s>
+            <s className={styles.strikethrough}>Cross Out</s>
           </span>
         </div>
       </section>
