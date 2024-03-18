@@ -1,4 +1,5 @@
 import styles from './Card.module.css';
+import Image from './Image';
 
 const EXAMPLE_IMG = 'https://image.idus.com/image/files/d5da94ffc1b840bd9ccc0dc86da5ab24.jpg';
 
@@ -18,7 +19,7 @@ export default function Card({ direction, label, title, image, star }: CardProps
 
   return (
     <article aria-label='Card' className={`${styles.container} ${styles[direction]}`}>
-      <img src={image || EXAMPLE_IMG} alt={title} className={styles.image} />
+      <Image src={image} alt={title} />
       <section className={styles.info}>
         <div className={styles.titleWrapper}>
           <span>{label}</span>
