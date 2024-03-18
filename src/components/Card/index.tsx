@@ -1,6 +1,7 @@
 import styles from './Card.module.css';
 import Description from './Description';
 import Image from './Image';
+import Label from './Label';
 import Stars from './Stars';
 import Title from './Title';
 
@@ -18,7 +19,7 @@ export default function Card({ direction, label, title, image, star }: CardProps
       <Image src={image} alt={title} />
       <section className={styles.info}>
         <div className={styles.titleWrapper}>
-          <span>{label}</span>
+          <Label text={label} />
           <Title text={title} />
         </div>
         <div className={styles.descWrapper}>
