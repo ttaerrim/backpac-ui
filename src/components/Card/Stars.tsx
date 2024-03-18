@@ -1,10 +1,7 @@
+import { CardProps } from '.';
 import styles from './Card.module.css';
 
-type StarsProps = {
-  count: 1 | 2 | 3 | 4 | 5;
-};
-
-export default function Stars({ count }: StarsProps) {
+export default function Stars({ count }: { count: CardProps['star'] }) {
   const getStarsArray = (star: number) => {
     const arr = Array.from({ length: 5 }, (_, i) => i);
     return arr.map((i) => i < star);

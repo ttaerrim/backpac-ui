@@ -5,15 +5,16 @@ import Label from './Label';
 import Stars from './Stars';
 import Title from './Title';
 
-type CardProps = {
+export type CardProps = {
   direction: 'row' | 'column';
   label: string;
   title: string;
+  description: string;
   image?: string;
   star: 1 | 2 | 3 | 4 | 5;
 };
 
-export default function Card({ direction, label, title, image, star }: CardProps) {
+export default function Card({ direction, label, title, description, image, star }: CardProps) {
   return (
     <article aria-label='Card' className={`${styles.container} ${styles[direction]}`}>
       <Image src={image} alt={title} />
@@ -31,10 +32,7 @@ export default function Card({ direction, label, title, image, star }: CardProps
       </section>
       <section className={styles.stars}>
         <Stars count={star} />
-        <Description
-          message='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.'
-        />
+        <Description text={description} />
       </section>
     </article>
   );

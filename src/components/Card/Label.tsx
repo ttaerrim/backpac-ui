@@ -1,3 +1,5 @@
-export default function Label({ text }: { text: string }) {
+import { CardProps } from '.';
+
+export default function Label({ text }: { text: CardProps['label'] }) {
   return <span>{text}</span>;
 }
