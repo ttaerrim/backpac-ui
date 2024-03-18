@@ -3,9 +3,10 @@ import Card from './components/Card';
 
 function App() {
   return (
-    <>
-      <Card />
-    </>
+    <div>
+      <Card direction='column' label='Card Label' title='Card Title' star={3} />
+      <Card direction='column' label='Card Label 2' title='Card Title 2' star={4} />
+    </div>
   );
 }
 
