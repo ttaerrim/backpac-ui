@@ -1,6 +1,11 @@
 .container {
   width: 10rem;
   border: 1px solid saddlebrown;
+  display: flex;
+
+  &.column {
+    flex-direction: column;
+  }
 }
 
 .image {
