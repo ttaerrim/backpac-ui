@@ -1,7 +1,7 @@
 import styles from './Card.module.css';
+import Description from './Description';
 import Image from './Image';
-
-const EXAMPLE_IMG = 'https://image.idus.com/image/files/d5da94ffc1b840bd9ccc0dc86da5ab24.jpg';
+import Stars from './Stars';
 
 type CardProps = {
   direction: 'row' | 'column';
@@ -12,11 +12,6 @@ type CardProps = {
 };
 
 export default function Card({ direction, label, title, image, star }: CardProps) {
-  const getStarsArray = (star: number) => {
-    const arr = Array.from({ length: 5 }, (_, i) => i);
-    return arr.map((i) => i < star);
-  };
-
   return (
     <article aria-label='Card' className={`${styles.container} ${styles[direction]}`}>
       <Image src={image} alt={title} />
@@ -35,11 +30,7 @@ export default function Card({ direction, label, title, image, star }: CardProps
         </div>
       </section>
       <section className={styles.stars}>
-        <div className={styles.starWrapper}>
-          {getStarsArray(star).map((item, i) => (
-            <div key={i} className={`${styles.star} ${item ? styles.fill : ''}`}></div>
-          ))}
-        </div>
+        <Stars count={star} />
         <Description
           message='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.'
