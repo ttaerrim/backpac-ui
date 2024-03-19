@@ -1,21 +1,29 @@
 .container {
   width: 10rem;
+  height: fit-content;
   border: 1px solid rgb(185, 185, 185);
   border-radius: 0.2rem;
   overflow: hidden;
-  display: flex;
   background-color: rgb(248, 248, 248);
 
-  &.column {
-    flex-direction: column;
+  &.row {
+    display: flex;
+    width: 30rem;
   }
 }
 
 .image {
   width: 100%;
-  height: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
+}
+
+.rowWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 65%;
+  justify-content: space-between;
 }
 
 .label {
@@ -27,6 +35,10 @@
   margin: 0;
   font-weight: 500;
   font-size: medium;
+  width: 95%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .info {
@@ -64,24 +76,37 @@
 .stars {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 0.5rem;
   gap: 0.2rem;
   border-top: 1px solid rgb(185, 185, 185);
 
-  .starWrapper {
-    display: flex;
-    gap: 0.1rem;
+  &.column {
+    min-height: 2rem;
   }
+}
 
-  .star {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 99%;
-    background-color: rgb(185, 185, 185);
+.starWrapper {
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+}
 
-    &.fill {
-      background-color: rgb(255, 217, 0);
-    }
+.divide {
+  margin-inline: 0.3rem;
+  width: 1px;
+  background-color: rgb(185, 185, 185);
+  height: 90%;
+}
+
+.star {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 99%;
+  background-color: rgb(185, 185, 185);
+
+  &.fill {
+    background-color: rgb(255, 217, 0);
   }
 }
 
@@ -89,8 +114,11 @@
   display: inline-block;
   width: 95%;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
   font-size: small;
   color: rgb(104, 104, 104);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }

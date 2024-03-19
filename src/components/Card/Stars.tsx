@@ -9,9 +9,10 @@ export default function Stars({ count }: { count: CardProps['star'] }) {
 
   return (
     <div className={styles.starWrapper}>
-      {getStarsArray(count).map((item, i) => (
-        <div key={i} className={`${styles.star} ${item ? styles.fill : ''}`}></div>
-      ))}
+      {count &&
+        getStarsArray(count).map((item, i) => (
+          <div key={i} className={`${styles.star} ${item ? styles.fill : ''}`}></div>
+        ))}
     </div>
   );
 }

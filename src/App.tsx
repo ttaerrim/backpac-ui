@@ -1,4 +1,4 @@
-import './App.css';
+import styles from './App.module.css';
 import Card from './components/Card';
 
 const LOREM_IPSUM =
@@ -6,9 +6,11 @@ const LOREM_IPSUM =
 
 function App() {
   return (
-    <div>
+    <div className={styles.cardContainer}>
       <Card direction='column' label='Card Label' title='Card Title' star={3} description={LOREM_IPSUM} />
-      <Card direction='column' label='Card Label 2' title='Card Title 2' star={4} description={LOREM_IPSUM} />
+      <Card direction='column' label='Card Label 2' title='Card Title 2' star={4} />
+      <Card direction='column' label='Card Label 3' title='Card Title 3' description={LOREM_IPSUM} />
+      <Card direction='row' label='Card Label 4' title={LOREM_IPSUM} description={LOREM_IPSUM} star={3} />
     </div>
   );
 }
