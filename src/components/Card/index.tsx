@@ -25,7 +25,7 @@ function RowCard({ title, description, image, star }: Omit<CardProps, 'direction
       <Card.Image src={image} alt={title} width='33%' />
       <section className={styles.rowWrapper}>
         <Card.Title text={title} />
-        <Card.Description text={description} line={2} />
+        <Card.Description text={description} line={3} />
         {star && (
           <div className={styles.starWrapper}>
             <Card.Stars count={star} />
