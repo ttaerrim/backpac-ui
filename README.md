@@ -1,30 +1,11 @@
-# React + TypeScript + Vite
+# 과제 노트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## `과제 1`
 
-Currently, two official plugins are available:
+- 이전에 Compound Component Pattern나 Component Composition(합성)에 대한 글을 인상 깊게 읽은 기억이 있습니다. UI의 변경 사항이 생길 때마다 조합하여 별도 컴포넌트를 만드는 방식이 UI variation에 대처하기 좋은 방법이라는 생각을 했었습니다. 백패커의 이번 과제에 해당 방식을 적용하면 좋을 것 같다고 생각하여 적용해 보았습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### 적용한 이유
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+해당 과제는 크게는 가로형, 세로형 UI가 분리되고 작게는 설명을 덧붙일 건지, 별점을 보여 줄 것인지에 따라 UI가 나뉩니다.
+이를 하나의 컴포넌트에서 `direction` 이나 `isShowStar` 등과 같은 변수로 나누어 분기 처리를 할 수도 있습니다.
+그러나 분기 처리를 해 한 컴포넌트에서 여러 가지의 UI의 책임을 부여하는 것보다 UI가 가지는 하위 컴포넌트를 작게 분리하고 이를 합성하여 사용하는 것이 코드를 읽기에도, 이후에 더 많은 UI의 변경이 생겨 유지보수를 할 때에도 좋은 효과를 가져올 것이라고 생각했습니다.
