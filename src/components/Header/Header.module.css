@@ -1,0 +1,20 @@
+.container {
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid rgb(185, 185, 185);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.menus {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu {
+  cursor: pointer;
+}
