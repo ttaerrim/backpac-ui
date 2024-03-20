@@ -33,9 +33,11 @@ export default function Index({
           onBlur={() => {
             if (buttonDisabled) setIsBlurred(true);
           }}
-          onFocus={() => setIsBlurred(false)}
-          disabled={disabled || readOnly}
+          onFocus={() => {
+            if (!readOnly) setIsBlurred(false);
+          }}
           readOnly={readOnly}
+          disabled={disabled}
         />
         <span className={styles.count}>{input.length}</span>
       </div>

@@ -24,16 +24,12 @@
 
   &:disabled {
     cursor: not-allowed;
+    background-color: rgb(241, 241, 241);
 
     &::placeholder {
       color: rgba(226, 74, 74, 0.7);
       font-weight: 600;
     }
-  }
-
-  &:read-only {
-    background-color: #fff;
-    cursor: unset;
   }
 }
 
