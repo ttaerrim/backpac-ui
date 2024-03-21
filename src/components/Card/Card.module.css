@@ -23,7 +23,7 @@
   flex-direction: column;
   padding: 1rem;
   width: 67%;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   @media screen and (max-width: 500px) {
     padding: 0.5rem;
