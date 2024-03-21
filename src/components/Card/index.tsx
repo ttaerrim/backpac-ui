@@ -1,5 +1,6 @@
 import styles from './Card.module.css';
 import Card from './Card';
+import { useResizableLine } from '../../hooks/useResizableLine';
 
 export type CardProps = {
   direction: 'row' | 'column';
@@ -20,12 +21,13 @@ export default function Index({ direction, label, title, description, image, sta
 }
 
 function RowCard({ title, description, image, star }: Omit<CardProps, 'direction'>) {
+  const { line } = useResizableLine();
   return (
     <Card direction='row'>
       <Card.Image src={image} alt={title} width='33%' />
       <section className={styles.rowWrapper}>
         <Card.Title text={title} />
-        <Card.Description text={description} line={3} />
+        <Card.Description text={description} line={line} />
         {star && (
           <div className={styles.starWrapper}>
             <Card.Stars count={star} />
