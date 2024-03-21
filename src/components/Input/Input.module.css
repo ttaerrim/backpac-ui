@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  width: 50rem;
+  width: 100%;
   gap: 0.2rem;
 }
 
@@ -30,6 +30,11 @@
       color: rgba(226, 74, 74, 0.7);
       font-weight: 600;
     }
+  }
+
+  &[readonly] {
+    background-color: #fff;
+    cursor: unset;
   }
 }
 
